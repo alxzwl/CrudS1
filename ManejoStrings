@@ -1,0 +1,43 @@
+public static void main(String[] args) {
+
+		// Metodo 1 Cadenas de Caracteres en reversa
+		/*
+		 * String s = "Welcome"; StringBuilder sb = new StringBuilder(s); sb.reverse();
+		 * String text = sb.toString(); System.out.println("Original string: " + s);
+		 * System.out.println("Reversed string: " + text);
+		 */
+
+		// Metodo 2 Cadenas de Caracteres en reversa
+		/*
+		 * String s = "Welcome"; StringBuffer sb = new StringBuffer(s); sb.reverse();
+		 * String text = sb.toString(); System.out.println("Original string: " + s);
+		 * System.out.println("Reversed string: " + text);
+		 */
+
+		// Metodo 3 Cadenas de Caracteres en reversa
+		/*
+		 * String s = "Welcome";
+		 * 
+		 * char[] ch = s.toCharArray(); String text = ""; for (int i = ch.length - 1; i
+		 * >= 0; i--) { text = text + ch[i]; } System.out.println("Original string: " +
+		 * s); System.out.println("Reversed string: " + text);
+		 */
+
+		// Metodo 4 Cadenas de Caracteres en reversa
+		/*
+		 * String s = "Java tutorial";
+		 * 
+		 * // convert string to character array char[] ch = s.toCharArray();
+		 * 
+		 * List<Character> l = new ArrayList<>();
+		 * 
+		 * // Add the characters to the list for (char c : ch) l.add(c);
+		 * 
+		 * // Reverse using Collections Collections.reverse(l);
+		 * 
+		 * // Print the characters in the reverse order from the list ListIterator li =
+		 * l.listIterator(); while (li.hasNext()) System.out.print(li.next());
+		 */
+
+		JOptionPane.showMessageDialog(null, "Hello there! How are you today?");
+	}
