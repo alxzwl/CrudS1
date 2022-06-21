@@ -40,4 +40,107 @@ public static void main(String[] args) {
 		 */
 
 		JOptionPane.showMessageDialog(null, "Hello there! How are you today?");
+		
+		// Valida el numero de caracteres permitido
+		// Valida los caracteres que se pueden ingresar
+		/*
+		 * String cadena = "asdfg"; Pattern pat = Pattern.compile("[a-zA-Z]{5,10}");
+		 * Matcher mat = pat.matcher(cadena); if (mat.matches()) {
+		 * System.out.println("String permitido"); } else {
+		 * System.out.println("El string no puede contener simbolos extranos");
+		 * System.out.println("El string no puede contener menos de 5 caracteres");
+		 * System.out.println("El string no puede contener mas de 10 caracteres"); }
+		 */
+
+		// Valida si el string comienza por abc o Abc
+		/*
+		 * // String cadena = "or 1 = 1"; // String cadena = "java"; String cadena =
+		 * "Abc";
+		 * 
+		 * Pattern pat = Pattern.compile("^[aA]bc.*"); Matcher mat =
+		 * pat.matcher(cadena); if (mat.matches()) {
+		 * System.out.println("Contiene la expresion"); } else {
+		 * System.out.println("No contiene la expresion"); }
+		 */
+
+		// Valida si el string contiene una inyeccion sql
+		/*
+		 * String cadena = "or 1 = 1"; // String cadena = "java";
+		 * 
+		 * // Comprobar si la cadena empieza puede contener una inyeccion sql Pattern
+		 * pat = Pattern.compile("^or 1 = 1.*"); Matcher mat = pat.matcher(cadena); if
+		 * (mat.matches()) {
+		 * System.out.println("!Peligro! Inyeccion de Dependecia !Peligro!");
+		 * System.out.println("!Peligro! Inyeccion de Dependecia !Peligro!"); } else {
+		 * System.out.println("Filtro limpio"); }
+		 */
+
+		// String cadena = "A mi me gustaria tomar un cafe java a cualquier hora del
+		// dia";
+
+		// Validacion de String con el metodo find de la Clase Matcher de la libreria de
+		// regex
+		/*
+		 * Pattern pat = Pattern.compile("java"); Matcher mat = pat.matcher(cadena); if
+		 * (mat.find()) { System.out.println("Palabra encontrada"); } else {
+		 * System.out.println("Palabra no encontrada"); }
+		 */
+
+		// Validacion de String con el metodo matches de la Clase Matcher de la libreria
+		// de regex
+		/*
+		 * Pattern pat = Pattern.compile(".*or 1 = 1.*");
+		 * 
+		 * Matcher mat = pat.matcher(cadena); if (mat.matches()) {
+		 * System.out.println("El String ingresado contiene la palabra buscada");
+		 * System.out.println("!Peligro Inyeccion de Dependencia!, !Peligro!, !Peligro!"
+		 * );
+		 * System.out.println("!Peligro Inyeccion de Dependencia!, !Peligro!, !Peligro!"
+		 * );
+		 * System.out.println("!Peligro Inyeccion de Dependencia!, !Peligro!, !Peligro!"
+		 * ); } else { System.out.println("El String no contiene la palabra buscada"); }
+		 */
+
+		// Realiza la conexion a BBDD
+		// Realiza la creacion de una tabla desde java con Statement
+		// Realiza la insercion de un registro desde java
+		// Realiza un borrado de la BBDD desde java
+		// No Actualiza
+		/*
+		 * 
+		 * Connection conexion = null;
+		 * 
+		 * String url = "jdbc:mysql://localhost:3306/persistencia"; String user =
+		 * "root"; String pass = "root"; // consulta para crear una base de datos String
+		 * queryCrear =
+		 * "CREATE TABLE alumnos(id integer, nombre varchar(50), sexo char(1), primary key(id))"
+		 * ;
+		 * 
+		 * // Consulta para insertar un registro String queryRegistra =
+		 * "INSERT INTO alumnos(id, nombre, sexo) VALUES(1,'Manu','M')";
+		 * 
+		 * // Consulta para actualizar un registro String queryActualiza =
+		 * "UPDATE FROM alumnos SET sexo = 'H' WHERE id = 1";
+		 * 
+		 * // Consulta para eliminar un registro String queryElimina =
+		 * "DELETE FROM alumnos WHERE id=1"; try { conexion =
+		 * DriverManager.getConnection(url, user, pass); if (conexion != null) {
+		 * System.out.println("Conexion Exitosa"); } else {
+		 * System.out.println("Error en la conexion"); } // Crea el objet Statement
+		 * Statement st = conexion.createStatement();
+		 * 
+		 * // Instruccion que crea una nueva tabla en BBDD //
+		 * st.executeUpdate(queryCrear);
+		 * 
+		 * // Instruccion que inserta un nuevo registro en BBDD //
+		 * st.executeUpdate(queryRegistra);
+		 * 
+		 * // Instruccion que actualiza un registro en BBDD //
+		 * st.executeUpdate(queryAcutaliza); // st.executeQuery(queryActualiza);
+		 * 
+		 * // Instruccion que elimina un registro en BBDD
+		 * st.executeUpdate(queryElimina);
+		 * 
+		 * } catch (Exception e) { e.printStackTrace(); }
+		 */
 	}
